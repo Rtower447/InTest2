@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                     navView,
                     navController
             );
-        }
+        //}
 //        catch (Exception ex) {
 //            out("main", ex);
 //        }
