@@ -25,24 +25,18 @@ public class MainActivity extends AppCompatActivity {
                 R.id.navigation_first,
                 R.id.navigation_second
         ).build();
-        //
-        //try {
-            NavController navController = Navigation.findNavController(
-                    this,
-                    R.id.nav_host_fragment
-            );
-            NavigationUI.setupActionBarWithNavController(
-                    this,
-                    navController,
-                    appBarConfiguration
-            );
-            NavigationUI.setupWithNavController(
-                    navView,
-                    navController
-            );
-        //}
-//        catch (Exception ex) {
-//            out("main", ex);
-//        }
+        NavController navController = Navigation.findNavController(
+                this,
+                R.id.nav_host_fragment
+        );
+        NavigationUI.setupActionBarWithNavController(
+                this,
+                navController,
+                appBarConfiguration
+        );
+        NavigationUI.setupWithNavController(
+                navView,
+                navController
+        );
     }
 }
