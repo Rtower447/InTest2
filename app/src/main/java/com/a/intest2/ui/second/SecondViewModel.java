@@ -1,7 +1,18 @@
 package com.a.intest2.ui.second;
 
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 public class SecondViewModel extends ViewModel {
-    // TODO: Implement the ViewModel
+    private MutableLiveData<String> mText;
+    
+    public SecondViewModel() {
+        mText = new MutableLiveData<>();
+        mText.setValue("second fragment");
+    }
+    
+    public LiveData<String> getText() {
+        return mText;
+    }
 }

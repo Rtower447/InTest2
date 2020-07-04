@@ -3,16 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/navigation_first">
+    app:startDestination="@+id/navigation_first"
+
+    >
 
     <fragment
         android:id="@+id/navigation_first"
         android:name="com.a.intest2.ui.first.FirstFragment"
-        android:label="first_fragment"
-        tools:layout="@layout/first_fragment" />
+        android:label="First Nav"
+        tools:layout="@layout/first_fragment"
+        />
+
     <fragment
         android:id="@+id/navigation_second"
         android:name="com.a.intest2.ui.second.SecondFragment"
-        android:label="second_fragment"
-        tools:layout="@layout/second_fragment" />
+        android:label="Second Nav"
+        tools:layout="@layout/second_fragment"
+        />
+
 </navigation>

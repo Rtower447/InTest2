@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 import com.a.intest2.R;
 
 public class FirstFragment extends Fragment {
-    private FirstViewModel mViewModel;
+    private FirstViewModel viewModel;
     
     public static FirstFragment newInstance() {
         return new FirstFragment();
@@ -30,10 +30,9 @@ public class FirstFragment extends Fragment {
         return inflater.inflate(R.layout.first_fragment, container, false);
     }
     
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(FirstViewModel.class);
-        // TODO: Use the ViewModel
-    }
+//    @Override
+//    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+//        super.onActivityCreated(savedInstanceState);
+//        viewModel = ViewModelProviders.of(this).get(FirstViewModel.class);
+//    }
 }
