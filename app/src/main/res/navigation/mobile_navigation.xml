@@ -11,14 +11,14 @@
         android:id="@+id/navigation_first"
         android:name="com.a.intest2.ui.first.FirstFragment"
         android:label="First Nav"
-        tools:layout="@layout/first_fragment"
+        tools:layout="@layout/fragment_first"
         />
 
     <fragment
         android:id="@+id/navigation_second"
         android:name="com.a.intest2.ui.second.SecondFragment"
         android:label="Second Nav"
-        tools:layout="@layout/second_fragment"
+        tools:layout="@layout/fragment_second"
         />
 
 </navigation>

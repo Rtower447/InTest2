@@ -1,7 +1,5 @@
 package com.a.intest2.ui.first;
 
-import androidx.lifecycle.ViewModelProviders;
-
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -27,7 +25,7 @@ public class FirstFragment extends Fragment {
             @Nullable ViewGroup container,
             @Nullable Bundle savedInstanceState
     ) {
-        return inflater.inflate(R.layout.first_fragment, container, false);
+        return inflater.inflate(R.layout.fragment_first, container, false);
     }
     
 //    @Override
