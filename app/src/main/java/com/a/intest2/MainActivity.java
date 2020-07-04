@@ -10,8 +10,6 @@ import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import static com.a.intest2.Tool.out;
-
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navView = findViewById(R.id.nav_view);
         //
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_first,
-                R.id.navigation_second
+                R.id.menu_first,
+                R.id.menu_second
         ).build();
         NavController navController = Navigation.findNavController(
                 this,
