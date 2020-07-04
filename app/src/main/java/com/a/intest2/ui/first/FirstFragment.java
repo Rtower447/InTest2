@@ -14,23 +14,22 @@ import com.a.intest2.R;
 
 public class FirstFragment extends Fragment {
     private FirstViewModel viewModel;
+    private View root;
     
-    public static FirstFragment newInstance() {
-        return new FirstFragment();
-    }
-    
-    @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater,
-            @Nullable ViewGroup container,
-            @Nullable Bundle savedInstanceState
+            ViewGroup container, Bundle savedInstanceState
     ) {
-        return inflater.inflate(R.layout.fragment_first, container, false);
+        root = inflater.inflate(R.layout.fragment_first, container, false);
+        //
+        //        viewModel = ViewModelProviders.of(this).get(FirstViewModel.class);
+        //        final Button button = root.findViewById(R.id.btnFirst);
+        //        viewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        //            @Override
+        //            public void onChanged(@Nullable String s) {
+        //                button.setText(s);
+        //            }
+        //        });
+        return root;
     }
-    
-//    @Override
-//    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-//        super.onActivityCreated(savedInstanceState);
-//        viewModel = ViewModelProviders.of(this).get(FirstViewModel.class);
-//    }
 }

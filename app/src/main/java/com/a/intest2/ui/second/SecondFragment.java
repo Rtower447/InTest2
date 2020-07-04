@@ -14,23 +14,21 @@ import com.a.intest2.R;
 
 public class SecondFragment extends Fragment {
     private SecondViewModel viewModel;
+    private View root;
     
-    public static SecondFragment newInstance() {
-        return new SecondFragment();
-    }
-    
-    @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater,
-            @Nullable ViewGroup container,
-            @Nullable Bundle savedInstanceState
+            ViewGroup container, Bundle savedInstanceState
     ) {
-        return inflater.inflate(R.layout.fragment_second, container, false);
+        root = inflater.inflate(R.layout.fragment_second, container, false);
+        //        viewModel = ViewModelProviders.of(this).get(FirstViewModel.class);
+        //        final Button button = root.findViewById(R.id.btnSecond);
+        //        viewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        //            @Override
+        //            public void onChanged(@Nullable String s) {
+        //                button.setText(s);
+        //            }
+        //        });
+        return root;
     }
-    
-//    @Override
-//    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-//        super.onActivityCreated(savedInstanceState);
-//        mViewModel = ViewModelProviders.of(this).get(SecondViewModel.class);
-//    }
 }
