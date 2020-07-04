@@ -10,6 +10,8 @@ import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import static com.a.intest2.Tool.out;
+
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,18 +26,23 @@ public class MainActivity extends AppCompatActivity {
                 R.id.navigation_second
         ).build();
         //
-        NavController navController = Navigation.findNavController(
-                this,
-                R.id.nav_host_fragment
-        );
-        NavigationUI.setupActionBarWithNavController(
-                this,
-                navController,
-                appBarConfiguration
-        );
-        NavigationUI.setupWithNavController(
-                navView,
-                navController
-        );
+        try {
+            NavController navController = Navigation.findNavController(
+                    this,
+                    R.id.nav_host_fragment
+            );
+            NavigationUI.setupActionBarWithNavController(
+                    this,
+                    navController,
+                    appBarConfiguration
+            );
+            NavigationUI.setupWithNavController(
+                    navView,
+                    navController
+            );
+        }
+        catch (Exception ex) {
+            out("main", ex);
+        }
     }
 }
