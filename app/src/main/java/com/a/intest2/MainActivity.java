@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.navigation_second
         ).build();
         //
-        try {
+        //try {
             NavController navController = Navigation.findNavController(
                     this,
                     R.id.nav_host_fragment
@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
                     navController
             );
         }
-        catch (Exception ex) {
-            out("main", ex);
-        }
+//        catch (Exception ex) {
+//            out("main", ex);
+//        }
     }
 }
